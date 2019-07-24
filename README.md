@@ -14,8 +14,8 @@ The code is for UE 4.22.
 
 The modified parts are:
 
-in the AnimNode_BoneDrivenController.h the RotationOrder enum; then RotationOrder property and EulerToQuat method.
-in the AnimNode_BoneDrivenController.cpp EulerToQuat implementation and modified ExtractSourceValue method where it's used
+- in the AnimNode_BoneDrivenController.h the RotationOrder enum; then RotationOrder property and EulerFromQuat method.
+- in the AnimNode_BoneDrivenController.cpp EulerFromQuat implementation and modified ExtractSourceValue method where it's used
 
 	else if (SourceComponent < EComponentType::Scale)
 	{
@@ -30,4 +30,4 @@ in the AnimNode_BoneDrivenController.cpp EulerToQuat implementation and modified
 	}
   
   
-  I had to add to multiply to -1 because EulerToQuat will not give the same sigh as FQuat::Euler() method.
+  I had to add to multiply to -1 because EulerFromQuat will not give the same sigh as FQuat::Euler() method.
