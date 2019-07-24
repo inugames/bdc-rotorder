@@ -17,6 +17,8 @@ The modified parts are:
 - in the AnimNode_BoneDrivenController.h the RotationOrder enum; then RotationOrder property and EulerFromQuat method.
 - in the AnimNode_BoneDrivenController.cpp EulerFromQuat implementation and modified ExtractSourceValue method where it's used
 
+
+
 	else if (SourceComponent < EComponentType::Scale)
 	{
     //new code
